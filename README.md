@@ -1,7 +1,8 @@
 # debugf  [![Build Status](https://travis-ci.org/jfseb/debugf.svg?branch=master)](https://travis-ci.org/jfseb/abot_parser)[![Coverage Status](https://coveralls.io/repos/github/jfseb/debugf/badge.svg)](https://coveralls.io/github/jfseb/abot_parser)
 # debugf
 
-A tiny wrapper to extend [npm debug module](https://github.com/visionmedia/debug)
+A tiny wrapper extending [npm debug module](https://github.com/visionmedia/debug),
+which allows to pass function as arguments which will be lazily evaluated only if debugging is enabled
 
 
 ## Installation
@@ -43,4 +44,8 @@ debug( function() {
 
 // fake worker of some kind
 ```
+
+
+For other features and documentation, refer to
+[debug](https://github.com/visionmedia/debug/)
 
