@@ -1,6 +1,6 @@
 {
   "name": "debugf",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "debug with lazy function argument evaluation",
   "main": "js/index.js",
   "typings": "js/index.d.ts",
