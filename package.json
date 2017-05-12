@@ -6,9 +6,9 @@
   "typings": "js/index.d.ts",
   "scripts": {
     "build": "gulp && tsc",
-    "test": "node node_modules/nodeunit/bin/nodeunit test/index.nunit.js",
+    "test": "node node_modules/nodeunit/bin/nodeunit test/index.nunit.js && node node_modules/nodeunit/bin/nodeunit test/index_not_called.nunit.js",
     "instrument": "mkdir js_cov && jscoverage js/index.js js_cov/index.js --exclude *.map",
-    "testcov": "export FSD_COVERAGE=1 && nodeunit test/ --reporter=lcov | coveralls"
+    "testcov": "export FSD_COVERAGE=1 && nodeunit test/index.nunit.js --reporter=lcov | coveralls"
   },
   "repository": {
     "type": "git",
