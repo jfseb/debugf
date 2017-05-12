@@ -1,4 +1,4 @@
-# debugf  [![Build Status](https://travis-ci.org/jfseb/debugf.svg?branch=master)](https://travis-ci.org/jfseb/abot_parser)[![Coverage Status](https://coveralls.io/repos/github/jfseb/debugf/badge.svg)](https://coveralls.io/github/jfseb/abot_parser)
+# debugf  [![Build Status](https://travis-ci.org/jfseb/debugf.svg?branch=master)](https://travis-ci.org/jfseb/debugf)[![Coverage Status](https://coveralls.io/repos/github/jfseb/debugf/badge.svg)](https://coveralls.io/github/jfseb/debugf)
 # debugf
 
 A tiny wrapper extending [npm debug module](https://github.com/visionmedia/debug),
