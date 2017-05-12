@@ -1,0 +1,52 @@
+{
+  "name": "debugf",
+  "version": "0.1.0",
+  "description": "debug with lazy function argument evaluation",
+  "main": "js/index.js",
+  "typings": "js/index.d.ts",
+  "scripts": {
+    "build": "gulp && tsc",
+    "test": "node node_modules\\nodeunit\\bin\\nodeunit test\\index.nunit.js",
+    "instrument": "jscoverage js/ js_cov/ --exclude *.map",
+    "testcov": "export FSD_COVERAGE=1 && nodeunit test/ --reporter=lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfseb/debugf.git"
+  },
+  "keywords": [
+    "typescript",
+    "abot",
+    "chevrotrain"
+  ],
+  "author": "jfsebpublic@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jfseb/debugf/issues"
+  },
+  "homepage": "https://github.com/jfseb/debugf#readme",
+  "devDependencies": {
+    "@types/debug": "0.0.29",
+    "@types/node": "^7.0.5",
+    "babel-preset-es2015": "^6.22.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-env": "^0.4.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-newer": "^1.3.0",
+    "gulp-nodeunit": "^0.1.0",
+    "gulp-typescript": "^3.1.5",
+    "jscoverage": "^0.6.0",
+    "process": "^0.11.10",
+    "typescript": "^2.2.1"
+  },
+  "dependencies": {
+    "abot_erbase": "^0.1.4",
+    "chevrotain": "^0.27.3",
+    "debug": "^2.6.6",
+    "fdevsta_monmove": "^0.1.18",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.9.2"
+  }
+}
