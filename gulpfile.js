@@ -4,11 +4,6 @@ var gulp = require('gulp');
 var ts = require('gulp-typescript');
 var sourcemaps = require('gulp-sourcemaps');
 
-/**
- * Directory containing generated sources which still contain
- * JSDOC etc.
- */
-// var genDir = 'gen';
 var srcDir = 'src';
 var testDir = 'test';
 
@@ -50,49 +45,12 @@ gulp.task('tsc', [], function () {
     .pipe(gulp.dest('js'));
 });
 
-/*
-var webpacks = require('webpack-stream');
-gulp.task('webpack_notinuse', function() {
-  return gulp.src('./src/web/qbetable.tsx')
-    .pipe(webpacks( require('./webpack.config.js') ))
-    .pipe(gulp.dest('/app/public/js/'));
-});
-
-
-*/
-
-
-var del = require('del');
-
-gulp.task('clean:models', function () {
-  return del([
-    'sensitive/_cachefalse.js.zip',
-    'testmodel2/_cachefalse.js.zip',
-    'testmodel/_cachefalse.js.zip',
-    'sensitive/_cachetrue.js.zip',
-    'testmodel2/_cachetrue.js.zip',
-    'testmodel/_cachetrue.js.zip',
-    // here we use a globbing pattern to match everything inside the `mobile` folder
-  //  'dist/mobile/**/*',
-    // we don't want to clean this file though so we negate the pattern
-//    '!dist/mobile/deploy.json'
-  ]);
-});
-
-
 var newer = require('gulp-newer');
 const babel = require('gulp-babel');
 
 gulp.task('clean', ['clean:models']);
 
 
-
-var jsdoc = require('gulp-jsdoc3');
-
-gulp.task('doc', ['test'], function (cb) {
-  gulp.src([srcDir + '/**/*.js', 'README.md', './js/**/*.js'], { read: false })
-    .pipe(jsdoc(cb));
-});
 
 var imgSrc = 'src/**/*.js';
 //var imgDest = 'gen';
@@ -112,8 +70,6 @@ gulp.task('babel2', ['tsc2'], function () {
     }))
     .pipe(gulp.dest('gen2'));
 });
-
-
 
 /**
  * compile tsc (including srcmaps)
@@ -230,5 +186,5 @@ gulp.task('eslint', () => {
 
 
 // Default Task
-gulp.task('default', ['tsc',  'eslint', 'test', 'doc' ]);
+gulp.task('default', ['tsc',  'eslint' ]);
 gulp.task('build', ['tsc', 'eslint']);
