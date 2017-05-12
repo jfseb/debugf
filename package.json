@@ -6,7 +6,7 @@
   "typings": "js/index.d.ts",
   "scripts": {
     "build": "gulp && tsc",
-    "test": "node node_modules\\nodeunit\\bin\\nodeunit test\\index.nunit.js",
+    "test": "node node_modules/nodeunit/bin/nodeunit test/index.nunit.js",
     "instrument": "jscoverage js/ js_cov/ --exclude *.map",
     "testcov": "export FSD_COVERAGE=1 && nodeunit test/ --reporter=lcov | coveralls"
   },
